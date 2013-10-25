@@ -16,8 +16,6 @@ package de.jos;
  * limitations under the License.
  */
 
-import java.util.List;
-
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 
@@ -46,7 +44,7 @@ public class PngcrushMojo extends AbstractMojo {
 	/**
 	 * Path to the pngcrush executable.
 	 * 
-     * @parameter default-value="/usr/bin/pngcrush"
+     * @parameter default-value="pngcrush"
 	 */
 	private String pathToPngcrush;
 

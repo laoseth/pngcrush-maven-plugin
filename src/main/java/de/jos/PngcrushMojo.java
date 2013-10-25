@@ -39,23 +39,23 @@ public class PngcrushMojo extends AbstractMojo {
 	/**
 	 * Just perform a dry run that shows the possible compression ratios.
 	 * 
-	 * @parameter default-value="true"
+	 * @parameter default-value="false"
 	 */
 	private boolean dryRun;
 
 	/**
 	 * Path to the pngcrush executable.
 	 * 
-	 * @parameter
+     * @parameter default-value="/usr/bin/pngcrush"
 	 */
 	private String pathToPngcrush;
 
 	/**
 	 * pngcrush arguments.
 	 * 
-	 * @parameter
+     * @parameter default-value="-rem allb -brute -reduce"
 	 */
-	private List<String> arguments;
+	private String arguments;
 
 	public void execute() throws MojoExecutionException {
 		final PngCrushDirectoryWalker<Object> walker = new PngCrushDirectoryWalker<Object>(getLog(), dryRun,
